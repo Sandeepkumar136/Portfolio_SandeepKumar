@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { useDarkMode } from "../../context/DarkModeContext";
 
 const Navbar = () => {
   const [isToggleSidebarOpen , setToggleSidebarOpen] = useState(false);
-
+  const { darkMode, toggleDarkMode } = useDarkMode();
   const ToggleSidebar = ()=>{
     setToggleSidebarOpen(!isToggleSidebarOpen);
   }
@@ -29,7 +30,7 @@ const Navbar = () => {
             <li className="d-nav-items">Achievements</li>
             <li className="d-nav-items">About</li>
           </ul>
-            <div className="d-nav-items-theme"><i className="bx bx-sun"></i></div>
+            <div className="d-nav-items-theme"><i onClick={toggleDarkMode} className={`bx ${darkMode ? 'bx-sun': 'bx-moon'}`}></i></div>
         <div onClick={ToggleSidebar} className="toggle-btn">
           <i className={`bx ${isToggleSidebarOpen ? 'bx-x': 'bx-menu'}`}></i>
         </div>

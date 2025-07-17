@@ -1,12 +1,13 @@
 import React from 'react'
 import Navbar from './components/Navigation/Navbar';
 import './stylesheet/style.css';
+import { DarkModeProvider } from './context/DarkModeContext';
 
 const App = () => {
   return (
-    <div>
+    <DarkModeProvider>
       <Navbar/>
-    </div>
+    </DarkModeProvider>
   )
 }
 
