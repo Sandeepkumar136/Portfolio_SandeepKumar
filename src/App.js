@@ -13,11 +13,13 @@ import Achievements from './components/Routes/Achievements';
 import Resume from './components/Routes/Resume';
 import About from './components/Routes/About';
 import Education from './components/Routes/Education';
+import { AlertDialogueProvider } from './context/AlertDialogueContext';
 
 const App = () => {
   return (
     <Router>
       <DarkModeProvider>
+        <AlertDialogueProvider>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>} />
@@ -30,6 +32,7 @@ const App = () => {
         <Route path='/about' element={<About/>} />
         <Route path='/education' element={<Education/>} />
       </Routes>
+        </AlertDialogueProvider>
       </DarkModeProvider>
       <Footer/>
     </Router>
