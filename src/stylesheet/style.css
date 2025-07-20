@@ -79,7 +79,7 @@ body {
   background-color: #f0f0f0;
   list-style: none;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   padding: 0.5rem 1.2rem;
   cursor: pointer;
@@ -115,6 +115,7 @@ body {
   box-shadow: 0px 0px 2px 1px rgba(193, 193, 193, 0.38);
   cursor: pointer;
   transition: 0.3s all ease-in;
+  font-size: 0.8rem;
 }
 
 .d-nav-items:hover {
@@ -202,17 +203,16 @@ body {
   justify-content: start;
   align-items: center;
   gap: 0.5rem;
-  background-color: #f0f0f0;
   cursor: pointer;
   transition: 0.3s all ease-in-out;
 }
 
-.dark-mode .side-items {
-  background-color: #232323;
-}
-
 .side-items:hover {
   background-color: rgba(0, 123, 255, 0.2039215686);
+}
+
+.dark-mode .side-items:hover {
+  background-color: rgba(3, 19, 35, 0.3568627451);
 }
 
 .side-icon {
@@ -673,10 +673,5 @@ body {
   }
   .f-i-t {
     font-size: 0.7rem;
-  }
-}
-@media only screen and (max-width: 462px) {
-  .footer {
-    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
