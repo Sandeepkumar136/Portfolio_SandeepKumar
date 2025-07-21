@@ -49,6 +49,10 @@ body {
   justify-content: start;
   align-items: center;
   gap: 0.5rem;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 .logo-contain i {
@@ -65,6 +69,11 @@ body {
   font-weight: 600;
   opacity: 0.8;
   font-family: "poppins", sans-serif;
+  color: #111;
+}
+
+.dark-mode .logo {
+  color: white;
 }
 
 .nav-contain {
@@ -85,10 +94,15 @@ body {
   cursor: pointer;
   opacity: 0.8;
   transition: 0.2s all ease-in;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: #111;
 }
 
 .dark-mode .nav-items {
   background-color: #232323;
+  color: #fff;
 }
 
 .nav-items:hover {
@@ -116,6 +130,14 @@ body {
   cursor: pointer;
   transition: 0.3s all ease-in;
   font-size: 0.7rem;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: #111;
+}
+
+.dark-mode .d-nav-items {
+  color: #fff;
 }
 
 .d-nav-items:hover {
@@ -205,6 +227,7 @@ body {
   gap: 0.5rem;
   cursor: pointer;
   transition: 0.3s all ease-in-out;
+  text-decoration: none;
 }
 
 .side-items:hover {
@@ -220,11 +243,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #111;
+}
+
+.dark-mode .side-icon {
+  color: #fff;
 }
 
 .side-text {
   font-size: 1rem;
   opacity: 0.7;
+  color: #111;
+}
+
+.dark-mode .side-text {
+  color: #fff;
 }
 
 @media only screen and (max-width: 768px) {
