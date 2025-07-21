@@ -50,6 +50,14 @@ body {
   text-decoration: none;
   background-color: transparent;
 }
+.logo-contain:active,
+.logo-contain:visited,
+.logo-contain:focus {
+  background-color: transparent !important;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* <– THIS is the true slayer */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .logo-contain i {
   font-size: 1.7rem;
   opacity: 0.5;
@@ -65,7 +73,7 @@ body {
   font-family: "poppins", sans-serif;
   color: #111;
 }
-.dark-mode .logo{
+.dark-mode .logo {
   color: #ffff;
 }
 
@@ -124,7 +132,7 @@ body {
   text-decoration: none;
   color: #111;
 }
-.dark-mode .d-nav-items{
+.dark-mode .d-nav-items {
   color: #fff;
 }
 .d-nav-items:hover {
@@ -141,6 +149,15 @@ body {
   transition: 0.4s all ease-in-out;
   padding: 0 1rem;
   font-weight: 500;
+  background-color: transparent;
+}
+.d-nav-items-theme:active,
+.d-nav-items-theme:visited,
+.d-nav-items-theme:focus {
+  background-color: transparent !important;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* <– THIS is the true slayer */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .d-nav-items-theme:hover {
   opacity: 1;
@@ -154,17 +171,15 @@ body {
   align-items: center;
   cursor: pointer;
   display: none;
+  background-color: transparent;
 }
-@media only screen and (max-width: 1237px) {
-  .nav-contain {
-    display: none;
-  }
-  .toggle-btn {
-    display: inline;
-  }
-  .d-nav-list {
-    display: none;
-  }
+.toggle-btn:active,
+.toggle-btn:visited,
+.toggle-btn:focus {
+  background-color: transparent !important;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* <– THIS is the true slayer */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 // Sidebar
 .sidebar {
@@ -179,7 +194,24 @@ body {
   transition: 0.5s all ease-in-out;
   transform: translateX(110%);
   z-index: 30000;
+  display: none;
 }
+// ######################
+@media only screen and (max-width: 1237px) {
+  .nav-contain {
+    display: none;
+  }
+  .toggle-btn {
+    display: inline;
+  }
+  .d-nav-list {
+    display: none;
+  }
+  .sidebar{
+    display: inline;
+  }
+}
+// #######################
 .dark-mode .sidebar {
   backdrop-filter: blur(7px) saturate(200%);
   -webkit-backdrop-filter: blur(7px) saturate(200%);
@@ -205,19 +237,14 @@ body {
   justify-content: start;
   align-items: center;
   gap: 0.5rem;
-  // background-color: #f0f0f0;
+  background-color: transparent;
   cursor: pointer;
   transition: 0.3s all ease-in-out;
   text-decoration: none;
 }
-// .dark-mode .side-items {
-//   background-color: #232323;
-// }
+
 .side-items:hover {
   background-color: #007bff34;
-}
-.dark-mode .side-items:hover{
-  background-color: #0313235b;
 }
 .side-icon {
   font-size: 1.5rem;
@@ -226,7 +253,7 @@ body {
   align-items: center;
   color: #111;
 }
-.dark-mode .side-icon{
+.dark-mode .side-icon {
   color: #fff;
 }
 .side-text {
@@ -235,7 +262,7 @@ body {
   @extend %type-font;
   color: #111;
 }
-.dark-mode .side-text{
+.dark-mode .side-text {
   color: #fff;
 }
 @media only screen and (max-width: 768px) {
@@ -268,7 +295,11 @@ body {
 .index-text-overlay {
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(247, 245, 245, 0.1568627451), #eeeeee);
+  background: linear-gradient(
+    to bottom,
+    rgba(247, 245, 245, 0.1568627451),
+    #eeeeee
+  );
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,7 +307,11 @@ body {
 }
 
 .dark-mode .index-text-overlay {
-  background: linear-gradient(to bottom, rgba(0, 58, 124, 0.3529411765), #004890);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 58, 124, 0.3529411765),
+    #004890
+  );
 }
 
 .text-upper-base {
@@ -340,7 +375,7 @@ body {
 .text-contain-index-pera {
   width: 700px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 2rem;
   opacity: 0.7;
   @extend %type-font;
@@ -348,7 +383,8 @@ body {
 }
 
 @keyframes blink {
-  0%, 100% {
+  0%,
+  100% {
     border-color: black;
     opacity: 1;
   }
@@ -358,7 +394,8 @@ body {
   }
 }
 @keyframes Darkblink {
-  0%, 100% {
+  0%,
+  100% {
     border-color: #f9f9f9;
     opacity: 1;
   }
@@ -392,7 +429,7 @@ body {
   outline: none;
   outline: none;
 }
-#Openlink{
+#Openlink {
   border: none;
   outline: none;
 }
@@ -692,5 +729,5 @@ body {
 //   .footer{
 //     display: none;
 //   }
-  
+
 // }

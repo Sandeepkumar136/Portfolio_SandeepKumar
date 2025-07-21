@@ -55,6 +55,15 @@ body {
   background-color: transparent;
 }
 
+.logo-contain:active,
+.logo-contain:visited,
+.logo-contain:focus {
+  background-color: transparent !important;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* <– THIS is the true slayer */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 .logo-contain i {
   font-size: 1.7rem;
   opacity: 0.5;
@@ -155,6 +164,16 @@ body {
   transition: 0.4s all ease-in-out;
   padding: 0 1rem;
   font-weight: 500;
+  background-color: transparent;
+}
+
+.d-nav-items-theme:active,
+.d-nav-items-theme:visited,
+.d-nav-items-theme:focus {
+  background-color: transparent !important;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* <– THIS is the true slayer */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .d-nav-items-theme:hover {
@@ -170,19 +189,18 @@ body {
   align-items: center;
   cursor: pointer;
   display: none;
+  background-color: transparent;
 }
 
-@media only screen and (max-width: 1237px) {
-  .nav-contain {
-    display: none;
-  }
-  .toggle-btn {
-    display: inline;
-  }
-  .d-nav-list {
-    display: none;
-  }
+.toggle-btn:active,
+.toggle-btn:visited,
+.toggle-btn:focus {
+  background-color: transparent !important;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* <– THIS is the true slayer */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 .sidebar {
   position: fixed;
   width: 400px;
@@ -195,8 +213,23 @@ body {
   transition: 0.5s all ease-in-out;
   transform: translateX(110%);
   z-index: 30000;
+  display: none;
 }
 
+@media only screen and (max-width: 1237px) {
+  .nav-contain {
+    display: none;
+  }
+  .toggle-btn {
+    display: inline;
+  }
+  .d-nav-list {
+    display: none;
+  }
+  .sidebar {
+    display: inline;
+  }
+}
 .dark-mode .sidebar {
   backdrop-filter: blur(7px) saturate(200%);
   -webkit-backdrop-filter: blur(7px) saturate(200%);
@@ -225,6 +258,7 @@ body {
   justify-content: start;
   align-items: center;
   gap: 0.5rem;
+  background-color: transparent;
   cursor: pointer;
   transition: 0.3s all ease-in-out;
   text-decoration: none;
@@ -232,10 +266,6 @@ body {
 
 .side-items:hover {
   background-color: rgba(0, 123, 255, 0.2039215686);
-}
-
-.dark-mode .side-items:hover {
-  background-color: rgba(3, 19, 35, 0.3568627451);
 }
 
 .side-icon {
@@ -361,7 +391,7 @@ body {
 .text-contain-index-pera {
   width: 700px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 2rem;
   opacity: 0.7;
   font-weight: 400;
