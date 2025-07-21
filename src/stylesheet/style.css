@@ -22,7 +22,7 @@ body {
   color: #f1f1f1;
 }
 
-.text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
+.text-alert, .heading-alert, .text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
   font-family: "TikTok Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -736,5 +736,65 @@ body {
   }
   .f-i-t {
     font-size: 0.7rem;
+  }
+}
+.alert-container {
+  width: 80%;
+  margin: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: fixed;
+  left: 0;
+}
+
+.upper-alert-contain {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading-alert {
+  font-size: 1.1rem;
+  font-weight: 800;
+  opacity: 0.8;
+}
+
+.text-alert {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.icon-alert {
+  font-size: 1.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.icon-alert:active,
+.icon-alert:visited,
+.icon-alert:focus {
+  background-color: transparent !important;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* <– THIS is the true slayer */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@media only screen and (max-width: 768px) {
+  .alert-container {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 1rem;
+    left: 0;
+    top: 5rem;
+  }
+  .heading-alert {
+    font-size: 0.9rem;
+  }
+  .text-alert {
+    font-size: 0.7;
   }
 }/*# sourceMappingURL=style.css.map */

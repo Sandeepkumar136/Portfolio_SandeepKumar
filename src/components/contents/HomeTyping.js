@@ -98,7 +98,7 @@ const HomeTyping = () => {
 
         {/* Description */}
         <motion.p
-          className=""
+          className="text-contain-index-pera"
           variants={fadeUp}
           initial="hidden"
           animate="visible"
