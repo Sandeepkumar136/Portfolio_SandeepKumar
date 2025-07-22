@@ -23,15 +23,14 @@ const Services = () => {
         {
           services.map((e, i)=>(
             <div key={i} className="services-contain">
-              <div className="serivces-heading-contain">
-                <i className={e.icon}></i>
+                <i className={`services-card-icon ${e.icon}`}></i>
                 <h3 className="heading-services">
                   {e.name}
                 </h3>
-              </div>
               <p className="text-services">
                 {e.alt}
               </p>
+              <button type="button" onClick={toString(e.link)} className="services-card-btn">Book Now</button>
             </div>
           ))
         }

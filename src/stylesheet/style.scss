@@ -65,6 +65,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #111;
+}
+.dark-mode .logo-contain i {
+  color: #ffff;
+  opacity: 0.5;
 }
 .logo {
   font-size: 1.1rem;
@@ -737,7 +742,7 @@ body {
   width: 80%;
   margin: 2rem;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.74);
+  background: rgba(255, 255, 255, 0.355);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -788,6 +793,93 @@ body {
   }
   .text-alert{
     font-size: 0.7;
+  }
+  
+}
+// Services/Services_Card
+.services-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2rem;
+  background: linear-gradient(45deg, #ffcffc46,#eac3ff39, #fff);
+  padding: 1rem;
+}
+.services-contain{
+  border: 2px solid #111;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+.services-card-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-size: 2.5rem;
+}
+.heading-services{
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  font-weight: 800;
+  opacity: 0.8;
+}
+.text-services{
+  font-size: 0.9rem;
+  @extend %type-font;
+  opacity: 0.6;
+}
+.services-card-btn{
+  margin: 0.5rem 0;
+  width: 100%;
+  border: none;
+  padding: 1rem 0;
+  background-color: #111;
+  color: #fff;
+  cursor: pointer;
+  // letter-spacing: 0.3px;
+}
+.services-card-btn:active,
+.services-card-btn:visited,
+.services-card-btn:focus {
+  background-color: #111 !important;
+  outline: none;
+  -webkit-tap-highlight-color: #111; /* <– THIS is the true slayer */
+  -webkit-tap-highlight-color: #111;
+}
+.dark-mode .services-container{
+  background: linear-gradient(45deg, #77407346,#4e3f5639, #000);
+}
+.dark-mode .services-contain{
+  border: 2px solid #fff;
+}
+.dark-mode .services-card-btn{
+  background-color: #fff;
+  color: #111;
+}
+.dark-mode .services-card-btn:active,
+.dark-mode .services-card-btn:visited,
+.dark-mode .services-card-btn:focus {
+  background-color: #fff !important;
+  outline: none;
+  -webkit-tap-highlight-color: #fff; /* <– THIS is the true slayer */
+  -webkit-tap-highlight-color: #fff;
+}
+@media only screen and (max-width: '1075px') {
+  .services-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+@media only screen and (max-width: '600px') {
+  .services-container{
+    grid-template-columns: repeat(1, 1fr);
   }
   
 }
