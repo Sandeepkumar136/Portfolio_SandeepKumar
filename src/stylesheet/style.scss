@@ -740,13 +740,14 @@ body {
 // Services/Alert message
 .alert-container {
   width: 80%;
-  margin: 2rem;
+  margin: 1rem 2rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.355);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   position: fixed;
+  z-index: 1500;
   left: 0;
 }
 .alert-contain {
@@ -880,6 +881,21 @@ body {
 @media only screen and (max-width: '600px') {
   .services-container{
     grid-template-columns: repeat(1, 1fr);
+    margin: 1rem;
+    padding: 1rem;
   }
-  
+  .services-card-icon{
+    font-size: 2rem;
+  }
+  .heading-services{
+    font-size: 0.9rem;
+  }
+  .text-services{
+    font-size: 0.7rem;
+  }
+  .services-card-btn{
+    font-size: 0.7rem;
+    padding: 0.8rem;
+  }
 }
+// Services/Form-container
