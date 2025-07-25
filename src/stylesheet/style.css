@@ -22,7 +22,7 @@ body {
   color: #f1f1f1;
 }
 
-.text-services, .text-alert, .heading-alert, .text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
+.f-submit-btn, .em-subtitle, .em-title, .services-card-btn, .text-services, .heading-services, .text-alert, .heading-alert, .text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
   font-family: "TikTok Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -746,8 +746,8 @@ body {
 }
 .alert-container {
   width: 80%;
-  margin: 1rem 2rem;
   padding: 1rem;
+  margin-left: 1rem;
   background: rgba(255, 255, 255, 0.355);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
@@ -755,6 +755,7 @@ body {
   position: fixed;
   z-index: 1500;
   left: 0;
+  top: 4rem;
 }
 
 .upper-alert-contain {
@@ -810,112 +811,60 @@ body {
   justify-content: center;
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
   margin: 2rem;
-  background: linear-gradient(45deg, rgba(255, 207, 252, 0.2745098039), rgba(234, 195, 255, 0.2235294118), #fff);
-  padding: 1rem;
+  gap: 1rem;
+}
+
+.services-wrapper {
+  height: 100%;
 }
 
 .services-contain {
-  border: 2px solid #111;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: start;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1rem;
+  gap: 0.5rem;
+  box-shadow: 0 0 1px 0.5px #999;
+  transition: 0.5s all ease-in-out;
+}
+
+.services-contain:hover {
+  box-shadow: 0 0 1px 1px #999;
 }
 
 .services-card-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  font-size: 2.5rem;
+  font-size: 2rem;
+  opacity: 0.8;
 }
 
 .heading-services {
-  font-size: 1.2rem;
-  margin: 1rem 0;
-  font-weight: 800;
-  opacity: 0.8;
+  font-size: 1rem;
 }
 
 .text-services {
   font-size: 0.9rem;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .services-card-btn {
-  margin: 0.5rem 0;
-  width: 100%;
   border: none;
-  padding: 1rem 0;
-  background-color: #111;
-  color: #fff;
+  outline: none;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  box-shadow: 0 0 1px 0.1px #999;
+  background-color: transparent;
   cursor: pointer;
 }
 
-.services-card-btn:active,
-.services-card-btn:visited,
-.services-card-btn:focus {
-  background-color: #111 !important;
-  outline: none;
-  -webkit-tap-highlight-color: #111; /* <– THIS is the true slayer */
-  -webkit-tap-highlight-color: #111;
+.services-card-btn:hover {
+  background-color: rgba(0, 123, 255, 0.2039215686);
 }
 
-.dark-mode .services-container {
-  background: linear-gradient(45deg, rgba(119, 64, 115, 0.2745098039), rgba(78, 63, 86, 0.2235294118), #000);
-}
-
-.dark-mode .services-contain {
-  border: 2px solid #fff;
-}
-
-.dark-mode .services-card-btn {
-  background-color: #fff;
-  color: #111;
-}
-
-.dark-mode .services-card-btn:active,
-.dark-mode .services-card-btn:visited,
-.dark-mode .services-card-btn:focus {
-  background-color: #fff !important;
-  outline: none;
-  -webkit-tap-highlight-color: #fff; /* <– THIS is the true slayer */
-  -webkit-tap-highlight-color: #fff;
-}
-
-@media only screen and (max-width: 1075px) {
-  .services-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media only screen and (max-width: 600px) {
-  .services-container {
-    grid-template-columns: repeat(1, 1fr);
-    margin: 1rem;
-    padding: 1rem;
-  }
-  .services-card-icon {
-    font-size: 2rem;
-  }
-  .heading-services {
-    font-size: 0.9rem;
-  }
-  .text-services {
-    font-size: 0.7rem;
-  }
-  .services-card-btn {
-    font-size: 0.7rem;
-    padding: 0.8rem;
-  }
-}
 #services {
-  border: 2px solid #000;
-  background-color: rgba(230, 230, 250, 0.741);
   margin-top: 3rem;
 }
 
@@ -935,7 +884,6 @@ body {
 }
 
 .logo-em-overlay {
-  border: 2px solid #000;
   width: 70px;
   height: 70px;
   position: absolute;
@@ -952,25 +900,23 @@ body {
 }
 
 .em-logo-contain {
-  border: 2px solid #000;
   margin-top: 0.5rem;
   margin-bottom: 0.3rem;
 }
 
 .em-title {
   font-size: 1.1rem;
-  font-weight: 800;
+  font-weight: 700;
   opacity: 0.8;
 }
 
 .em-subtitle {
   font-size: 0.9rem;
-  font-weight: 800;
+  font-weight: 700;
   opacity: 0.7;
 }
 
 .services-content {
-  border: 2px solid #000;
   background-color: #fff;
   border-radius: 7px;
   padding: 1rem;
@@ -978,7 +924,6 @@ body {
 
 .form-ser {
   display: flex;
-  border: 2px solid #000;
   flex-direction: column;
 }
 
@@ -992,13 +937,14 @@ body {
 
 .form-align-hand input {
   width: 250px;
-  border: 2px solid #000;
   height: 40px;
   border: none;
   outline: none;
   background-color: #d7d4d4;
   padding-left: 0.5rem;
   font-size: 0.9rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 1px 0.1px #999;
 }
 
 .form-align-hand input::-moz-placeholder {
@@ -1019,6 +965,8 @@ body {
   border: none;
   font-size: 0.9rem;
   color: #111;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 1px 0.1px #999;
 }
 
 .form-align-hand textarea::-moz-placeholder {
@@ -1030,15 +978,22 @@ body {
 }
 
 .ser-btn-form {
-  border: 2px solid #000;
   display: flex;
   justify-content: start;
   align-items: start;
   margin: 1rem 0;
 }
 
-.ser-btn-form label {
+.em-fm-sr {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+
+.em-fm-sr label {
   font-size: 0.9rem;
+  padding-bottom: 1rem;
   opacity: 0.7;
   font-weight: 800;
 }
@@ -1056,9 +1011,30 @@ body {
   cursor: pointer;
   border: none;
   outline: none;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 1px 0.1px #999;
 }
 
 .em-services button.active {
-  background-color: #000;
-  color: #fff;
+  background-color: rgba(0, 123, 255, 0.2039215686);
+  color: #111;
+}
+
+.f-submit-btn {
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: transparent;
+  box-shadow: 0 0 1px 0.1px #999;
+}
+
+.f-submit-btn:hover {
+  background-color: rgba(0, 123, 255, 0.2039215686);
+  cursor: pointer;
+}
+
+.submit-dialogue {
+  border: 2px solid #000;
 }/*# sourceMappingURL=style.css.map */

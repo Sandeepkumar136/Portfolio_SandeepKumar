@@ -145,9 +145,7 @@ const FormServices = () => {
           variants={fadeVariant}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          <div className="logo-em-overlay">
-            <i className="bx bx-food-menu"></i>
-          </div>
+
           <div className="em-title">Requirement Submission</div>
           <p className="em-subtitle">
             We offer a wide range of services tailored to your needs.

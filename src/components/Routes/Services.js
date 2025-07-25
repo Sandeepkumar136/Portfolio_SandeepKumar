@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Tilt from 'react-parallax-tilt';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Loader from '../contents/Loader';
@@ -22,8 +21,15 @@ const Services = () => {
   ];
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 60, scale: 0.9 },
-    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, type: "spring", bounce: 0.3 } },
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.8, 0.25, 1], // soft ease-in-out
+      },
+    },
   };
 
   return (
@@ -45,35 +51,24 @@ const Services = () => {
             key={i}
             className="services-wrapper"
             variants={cardVariants}
-            data-aos="fade-up"
+            data-aos="fade-down"
           >
-            <Tilt
-              glareEnable={true}
-              glareMaxOpacity={0.4}
-              glareColor="#ffffff"
-              glarePosition="all"
-              tiltMaxAngleX={15}
-              tiltMaxAngleY={15}
-              scale={1.05}
-              transitionSpeed={2000}
-            >
-              <div className="services-contain glass-effect">
-                <i className={`services-card-icon ${e.icon}`}></i>
-                <h3 className="heading-services">{e.name}</h3>
-                <p className="text-services">{e.alt}</p>
-                <motion.button
-                  type="button"
-                  onClick={() => window.open(e.link, "_blank")}
-                  className="services-card-btn sparkle-btn"
-                  whileHover={{
-                    scale: 1.1,
-                    transition: { yoyo: Infinity, duration: 0.4 }
-                  }}
-                >
-                  Book Now
-                </motion.button>
-              </div>
-            </Tilt>
+            <div className="services-contain">
+              <i className={`services-card-icon ${e.icon}`}></i>
+              <h3 className="heading-services">{e.name}</h3>
+              <p className="text-services">{e.alt}</p>
+              <motion.button
+                type="button"
+                onClick={() => window.open(e.link, "_blank")}
+                className="services-card-btn sparkle-btn"
+                whileHover={{
+                  scale: 1.05,
+                  transition: { duration: 0.3 }
+                }}
+              >
+                Book Now
+              </motion.button>
+            </div>
           </motion.div>
         ))}
       </motion.div>
