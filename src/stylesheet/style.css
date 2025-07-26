@@ -22,7 +22,7 @@ body {
   color: #f1f1f1;
 }
 
-.f-submit-btn, .em-subtitle, .em-title, .services-card-btn, .text-services, .heading-services, .text-alert, .heading-alert, .text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
+.text-submit, .f-submit-btn, .em-subtitle, .em-title, .services-card-btn, .text-services, .heading-services, .text-alert, .heading-alert, .text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
   font-family: "TikTok Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -758,6 +758,10 @@ body {
   top: 4rem;
 }
 
+.dark-mode .alert-container {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .upper-alert-contain {
   display: flex;
   justify-content: space-between;
@@ -864,44 +868,21 @@ body {
   background-color: rgba(0, 123, 255, 0.2039215686);
 }
 
-#services {
-  margin-top: 3rem;
+.services-card-btn:active,
+.services-card-btn:visited,
+.services-card-btn:focus {
+  background-color: transparent !important;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* <– THIS is the true slayer */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.sr-overlay {
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.2509803922), #ffffff);
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding: 1rem;
-  width: 100%;
-  height: 100%;
-  border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
-}
-
-.logo-em-overlay {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  top: -35px;
-  left: 50%;
-  background-color: #000;
+.dark-mode .services-card-btn {
   color: #fff;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  transform: translateX(-50%);
 }
 
-.em-logo-contain {
-  margin-top: 0.5rem;
-  margin-bottom: 0.3rem;
+#services {
+  margin: 2rem;
 }
 
 .em-title {
@@ -917,7 +898,6 @@ body {
 }
 
 .services-content {
-  background-color: #fff;
   border-radius: 7px;
   padding: 1rem;
 }
@@ -943,8 +923,12 @@ body {
   background-color: #d7d4d4;
   padding-left: 0.5rem;
   font-size: 0.9rem;
-  background-color: #f9f9f9;
+  background-color: transparent;
   box-shadow: 0 0 1px 0.1px #999;
+}
+
+.dark-mode .form-align-hand input {
+  color: #fff;
 }
 
 .form-align-hand input::-moz-placeholder {
@@ -953,6 +937,14 @@ body {
 
 .form-align-hand input::placeholder {
   color: #111;
+}
+
+.dark-mode .form-align-hand input::-moz-placeholder {
+  color: #fff;
+}
+
+.dark-mode .form-align-hand input::placeholder {
+  color: #fff;
 }
 
 .form-align-hand textarea {
@@ -965,8 +957,12 @@ body {
   border: none;
   font-size: 0.9rem;
   color: #111;
-  background-color: #f9f9f9;
+  background-color: transparent;
   box-shadow: 0 0 1px 0.1px #999;
+}
+
+.dark-mode .form-align-hand textarea {
+  color: #fff;
 }
 
 .form-align-hand textarea::-moz-placeholder {
@@ -975,6 +971,14 @@ body {
 
 .form-align-hand textarea::placeholder {
   color: #111;
+}
+
+.dark-mode .form-align-hand textarea::-moz-placeholder {
+  color: #fff;
+}
+
+.dark-mode .form-align-hand textarea::placeholder {
+  color: #fff;
 }
 
 .ser-btn-form {
@@ -1015,9 +1019,18 @@ body {
   box-shadow: 0 0 1px 0.1px #999;
 }
 
+.dark-mode .em-services button {
+  background-color: #111;
+  color: #fff;
+}
+
 .em-services button.active {
   background-color: rgba(0, 123, 255, 0.2039215686);
   color: #111;
+}
+
+.dark-mode .em-services button.active {
+  color: #fff;
 }
 
 .f-submit-btn {
@@ -1030,11 +1043,98 @@ body {
   box-shadow: 0 0 1px 0.1px #999;
 }
 
+.dark-mode .f-submit-btn {
+  color: #fff;
+}
+
 .f-submit-btn:hover {
   background-color: rgba(0, 123, 255, 0.2039215686);
   cursor: pointer;
 }
 
 .submit-dialogue {
-  border: 2px solid #000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  backdrop-filter: blur(9.8px);
+  -webkit-backdrop-filter: blur(9.8px);
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.submit-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.text-submit {
+  font-size: 0.8rem;
+  font-weight: 800;
+  opacity: 0.7;
+}
+
+@media only screen and (max-width: 1024px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .services-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 2rem 2rem 2rem;
+  }
+  .services-card-icon {
+    font-size: 1.5rem;
+  }
+  .heading-services {
+    font-size: 0.9rem;
+  }
+  .text-services {
+    font-size: 0.7rem;
+  }
+  .services-card-btn {
+    padding: 9px 14px;
+    font-size: 0.7rem;
+  }
+  .em-title {
+    font-size: 0.9rem;
+  }
+  .em-subtitle {
+    font-size: 0.8rem;
+  }
+  .form-align-hand textarea {
+    width: 250px;
+    height: 170px;
+    font-size: 0.8rem;
+  }
+  .form-align-hand input {
+    font-size: 0.8rem;
+  }
+  .em-fm-sr label {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .em-services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .em-services button {
+    font-size: 0.7rem;
+    box-shadow: 0 0 0.5px 0.1px #999;
+    padding: 7px 10px;
+    height: 100%;
+  }
+  .f-submit-btn {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=style.css.map */

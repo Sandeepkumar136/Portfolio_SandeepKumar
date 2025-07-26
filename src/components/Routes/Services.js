@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import Loader from '../contents/Loader';
 import AlertMessage from '../contents/AlertMessage';
 import FormServices from '../contents/FormServices';
-import services from '../Data/Json/Services';
+import services from '../assets/Json/Services';
 
 const Services = () => {
   useEffect(() => {

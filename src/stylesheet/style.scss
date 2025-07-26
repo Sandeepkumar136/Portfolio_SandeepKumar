@@ -752,7 +752,8 @@ body {
   left: 0;
   top: 4rem;
 }
-.alert-contain {
+.dark-mode .alert-container {
+  background-color: #00000000;
 }
 .upper-alert-contain {
   display: flex;
@@ -799,7 +800,7 @@ body {
   }
 }
 // Services/Services_Card
-.services-container{
+.services-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -809,11 +810,11 @@ body {
   gap: 1rem;
 }
 
-.services-wrapper{
+.services-wrapper {
   height: 100%;
 }
 
-.services-contain{
+.services-contain {
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -824,23 +825,23 @@ body {
   box-shadow: 0 0 1px 0.5px #999;
   transition: 0.5s all ease-in-out;
 }
-.services-contain:hover{
+.services-contain:hover {
   box-shadow: 0 0 1px 1px #999;
 }
-.services-card-icon{
+.services-card-icon {
   font-size: 2rem;
   opacity: 0.8;
 }
-.heading-services{
+.heading-services {
   font-size: 1rem;
   @extend %type-font;
 }
-.text-services{
+.text-services {
   font-size: 0.9rem;
   @extend %type-font;
   opacity: 0.7;
 }
-.services-card-btn{
+.services-card-btn {
   border: none;
   outline: none;
   padding: 10px 18px;
@@ -850,80 +851,53 @@ body {
   background-color: transparent;
   cursor: pointer;
 }
-.services-card-btn:hover{
+.services-card-btn:hover {
   background-color: #007bff34;
 }
-
+.services-card-btn:active,
+.services-card-btn:visited,
+.services-card-btn:focus {
+  background-color: transparent !important;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; /* <– THIS is the true slayer */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.dark-mode .services-card-btn {
+  color: #fff;
+}
 // Services/Form-container
 #services {
-  margin-top: 3rem;
+  margin: 2rem;
 }
-.sr-overlay {
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0.2509803922),
-    #ffffff
-  );
-  position: relative;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding: 1rem;
-  width: 100%;
-  height: 100%;
-  border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
-}
-.logo-em-overlay{
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  top: -35px;
-  left: 50%;
-  background-color: #000;
-  color: #fff;
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  transform: translateX(-50%);
-}
-.em-logo-contain{
-  margin-top: 0.5rem;
-  margin-bottom: 0.3rem;
-}
-.em-title{
+
+.em-title {
   font-size: 1.1rem;
   font-weight: 700;
   opacity: 0.8;
   @extend %type-font;
 }
-.em-subtitle{
+.em-subtitle {
   font-size: 0.9rem;
   font-weight: 700;
   @extend %type-font;
   opacity: 0.7;
 }
-.services-content{
-  background-color: #fff;
+.services-content {
   border-radius: 7px;
   padding: 1rem;
 }
-.form-ser{
+.form-ser {
   display: flex;
   flex-direction: column;
 }
-.form-align-hand{
+.form-align-hand {
   display: flex;
   justify-content: start;
   align-items: start;
   flex-direction: column;
   gap: 1rem;
 }
-.form-align-hand input{
+.form-align-hand input {
   width: 250px;
   height: 40px;
   border: none;
@@ -932,8 +906,11 @@ body {
   // border-radius: 5px;
   padding-left: 0.5rem;
   font-size: 0.9rem;
-    background-color: #f9f9f9;
+  background-color: transparent;
   box-shadow: 0 0 1px 0.1px #999;
+}
+.dark-mode .form-align-hand input {
+  color: #fff;
 }
 .form-align-hand input::-moz-placeholder {
   color: #111;
@@ -942,7 +919,14 @@ body {
 .form-align-hand input::placeholder {
   color: #111;
 }
-.form-align-hand textarea{
+.dark-mode .form-align-hand input::-moz-placeholder {
+  color: #fff;
+}
+
+.dark-mode .form-align-hand input::placeholder {
+  color: #fff;
+}
+.form-align-hand textarea {
   width: 300px;
   height: 200px;
   resize: none;
@@ -952,8 +936,11 @@ body {
   border: none;
   font-size: 0.9rem;
   color: #111;
-    background-color: #f9f9f9;
+  background-color: transparent;
   box-shadow: 0 0 1px 0.1px #999;
+}
+.dark-mode .form-align-hand textarea {
+  color: #fff;
 }
 .form-align-hand textarea::-moz-placeholder {
   color: #111;
@@ -962,33 +949,40 @@ body {
 .form-align-hand textarea::placeholder {
   color: #111;
 }
-.ser-btn-form{
+.dark-mode .form-align-hand textarea::-moz-placeholder {
+  color: #fff;
+}
+
+.dark-mode .form-align-hand textarea::placeholder {
+  color: #fff;
+}
+.ser-btn-form {
   display: flex;
   justify-content: start;
   align-items: start;
   margin: 1rem 0;
 }
-.em-fm-sr{
+.em-fm-sr {
   display: flex;
   justify-content: start;
   align-items: start;
   flex-direction: column;
 }
-.em-fm-sr label{
+.em-fm-sr label {
   font-size: 0.9rem;
   // margin-bottom: 1rem ;
   padding-bottom: 1rem;
   opacity: 0.7;
   font-weight: 800;
 }
-.em-services{
+.em-services {
   display: flex;
   justify-content: start;
   align-items: start;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-.em-services button{
+.em-services button {
   padding: 11px 16px;
   cursor: pointer;
   border: none;
@@ -996,25 +990,117 @@ body {
   background-color: #f9f9f9;
   box-shadow: 0 0 1px 0.1px #999;
 }
-.em-services button.active{
+.dark-mode .em-services button {
+  background-color: #111;
+  color: #fff;
+}
+.em-services button.active {
   background-color: #007bff34;
   color: #111;
 }
-.f-submit-btn{
+.dark-mode .em-services button.active {
+  color: #fff;
+}
+.f-submit-btn {
   border: none;
   outline: none;
   @extend %type-font;
-  padding: 10px 30px ;
+  padding: 10px 30px;
   font-size: 0.9rem;
   font-weight: 500;
   background-color: transparent;
   box-shadow: 0 0 1px 0.1px #999;
 }
-.f-submit-btn:hover{
+.dark-mode .f-submit-btn {
+  color: #fff;
+}
+.f-submit-btn:hover {
   background-color: #007bff34;
   cursor: pointer;
 }
 // Services/Form-Services/Complitation;
-.submit-dialogue{
-  border: 2px solid #000;
+.submit-dialogue {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  backdrop-filter: blur(9.8px);
+  -webkit-backdrop-filter: blur(9.8px);
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.submit-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+.text-submit {
+  font-size: 0.8rem;
+  font-weight: 800;
+  opacity: 0.7;
+  @extend %type-font;
+}
+// Services MediaQueiry
+@media only screen and (max-width: "1024px") {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: "768px") {
+  .services-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 2rem 2rem 2rem;
+  }
+  .services-card-icon {
+    font-size: 1.5rem;
+  }
+  .heading-services {
+    font-size: 0.9rem;
+  }
+  .text-services {
+    font-size: 0.7rem;
+  }
+  .services-card-btn {
+    padding: 9px 14px;
+    font-size: 0.7rem;
+  }
+  .em-title {
+    font-size: 0.9rem;
+  }
+  .em-subtitle {
+    font-size: 0.8rem;
+  }
+  .form-align-hand textarea {
+    width: 250px;
+    height: 170px;
+    font-size: 0.8rem;
+  }
+  .form-align-hand input {
+    font-size: 0.8rem;
+  }
+  .em-fm-sr label {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .em-services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .em-services button {
+    font-size: 0.7rem;
+    box-shadow: 0 0 0.5px 0.1px #999;
+    padding: 7px 10px;
+    height: 100%;
+  }
+  .f-submit-btn{
+    padding: 7px 10px;
+    font-size: 0.8rem;
+  }
 }
