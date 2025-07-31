@@ -22,7 +22,7 @@ body {
   color: #f1f1f1;
 }
 
-.title-cont, .text-submit, .f-submit-btn, .em-subtitle, .em-title, .services-card-btn, .text-services, .heading-services, .text-alert, .heading-alert, .text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
+.git-days, .title-cli, .title-cont, .text-submit, .f-submit-btn, .em-subtitle, .em-title, .services-card-btn, .text-services, .heading-services, .text-alert, .heading-alert, .text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
   font-family: "TikTok Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -1242,4 +1242,113 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   opacity: 0.5;
+}
+
+.client-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2rem;
+}
+
+.cli-contain {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  padding: 2rem 3rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  box-shadow: 0 0 1px 0.1px #999;
+  transition: 0.5s all ease-in;
+}
+
+.cli-contain:hover {
+  box-shadow: 0 0 1px 0.8px #999;
+}
+
+.cli-logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 0.1px #000;
+}
+
+.title-cli {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  opacity: 0.8;
+}
+
+.text-cli {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.star-rating {
+  font-size: 2rem;
+}
+
+.star.full {
+  color: #000;
+}
+
+.star.half {
+  color: #999;
+}
+
+.star.empty {
+  color: #dfdfdf;
+}
+
+.chart-container {
+  margin: 2rem;
+}
+
+.git-form {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+#git_days {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 16px;
+  width: 60px;
+  padding: 4px;
+  border: none;
+  outline: none;
+  height: -moz-fit-content;
+  height: fit-content;
+  box-shadow: 0 0 1px 0.3px #999;
+}
+
+.fetch-btn {
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+  padding: 0.3rem;
+  background-color: #0084ff;
+  color: #fff;
+  border-radius: 3px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.chart-wrapper {
+  margin: 1rem 6rem;
+}
+
+.git-days {
+  font-size: 0.9rem;
 }/*# sourceMappingURL=style.css.map */

@@ -160,17 +160,18 @@ const Chart = () => {
       transition={{ duration: 0.5 }}
       className="chart-container"
     >
-      <form className="git-form" onSubmit={handleSubmit}>
-        <label className='git-days' htmlFor="git_days">Enter Specified Days (5–90):</label>
+      <div className="chart-label-contain">
+        <form className="git-form" onSubmit={handleSubmit}>
         <input
           type="number"
           id="git_days"
           value={daysToFetch}
           onChange={(e) => setDaysToFetch(Number(e.target.value))}
         />
-        <button className='fetch-btn' type="submit">Fetch</button>
+        <button className='fetch-btn' type="submit">Fetch data</button>
       </form>
-
+        <label className='git-days' htmlFor="git_days">Enter Specified Days Between  (5–90):</label>
+      </div>
       <div className="chart-wrapper" style={{ height: '500px' }}>
         <ApexCharts
           options={options}
