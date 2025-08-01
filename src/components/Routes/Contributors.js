@@ -92,8 +92,8 @@ const Contributors = () => {
               <img src={client.img} alt={client.client} className="cli-logo" />
               <h5 className="title-cli">{client.client}</h5>
             </div>
-            <p className="text-cli">{client.description}</p>
             <StarRating rating={parseFloat(client.star)} />
+            <p className="text-cli">{client.description}</p>
           </div>
         ))}
       </div>

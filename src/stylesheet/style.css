@@ -22,7 +22,7 @@ body {
   color: #f1f1f1;
 }
 
-.git-days, .title-cli, .title-cont, .text-submit, .f-submit-btn, .em-subtitle, .em-title, .services-card-btn, .text-services, .heading-services, .text-alert, .heading-alert, .text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
+.git-days, .text-cli, .title-cli, .title-cont, .text-submit, .f-submit-btn, .em-subtitle, .em-title, .services-card-btn, .text-services, .heading-services, .text-alert, .heading-alert, .text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
   font-family: "TikTok Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -687,7 +687,6 @@ body {
 
 .f1 {
   background: linear-gradient(45deg, #0084ff, #8800ff, #ff008c);
-  -webkit-background-clip: text;
   color: transparent;
   font-weight: 500;
 }
@@ -1271,6 +1270,13 @@ body {
   box-shadow: 0 0 1px 0.8px #999;
 }
 
+.cli-logo-contain {
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+  align-items: center;
+}
+
 .cli-logo {
   width: 75px;
   height: 75px;
@@ -1351,4 +1357,69 @@ body {
 
 .git-days {
   font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .heading-inf {
+    font-size: 0.9rem;
+  }
+  .client-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cont-container {
+    gap: 0.5rem;
+  }
+  .cont-card {
+    padding: 1rem;
+  }
+  .logo-cont {
+    width: 50px;
+    height: 50px;
+  }
+  .title-cont {
+    font-size: 0.8rem;
+  }
+  .subtitle-cont {
+    font-size: 0.7rem;
+  }
+  .text-cont {
+    font-size: 0.6rem;
+  }
+  .client-container {
+    gap: 0.5rem;
+  }
+  .cli-contain {
+    padding: 1rem;
+    border-radius: 0;
+  }
+  .cli-logo-contain {
+    gap: 0.5rem;
+  }
+  .cli-logo {
+    width: 50px;
+    height: 50px;
+  }
+  .title-cli {
+    font-size: 0.8rem;
+  }
+  .star-rating {
+    font-size: 1.3rem;
+  }
+  .text-cli {
+    font-size: 0.7rem;
+  }
+  .chart-wrapper {
+    margin: 1rem 0;
+  }
+  .fetch-btn {
+    font-size: 0.8rem;
+  }
+  #git-days {
+    border-radius: 3rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .cont-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }/*# sourceMappingURL=style.css.map */
