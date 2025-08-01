@@ -910,6 +910,7 @@ body {
 }
 .dark-mode .form-align-hand input {
   color: #fff;
+  background-color: #333;
 }
 .form-align-hand input::-moz-placeholder {
   color: #111;
@@ -920,10 +921,14 @@ body {
 }
 .dark-mode .form-align-hand input::-moz-placeholder {
   color: #fff;
+  background-color: #333;
+
 }
 
 .dark-mode .form-align-hand input::placeholder {
   color: #fff;
+  background-color: #333;
+  
 }
 .form-align-hand textarea {
   width: 300px;
