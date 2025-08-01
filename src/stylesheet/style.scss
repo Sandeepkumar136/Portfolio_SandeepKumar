@@ -1262,6 +1262,17 @@ body {
 .star.empty {
   color: #dfdfdf;
 }
+
+.dark-mode .star.full{
+  color: #fff;
+}
+.dark-mode .star.half{
+  color: #adadad;
+}
+.dark-mode .star.empty{
+  color: #999;
+}
+
 // Contributors/Charts
 .chart-container {
   margin: 2rem;
@@ -1281,10 +1292,16 @@ body {
   outline: none;
   height: fit-content;
   box-shadow: 0 0 1px 0.3px #999;
+  text-align: center;
+}
+.dark-mode #git_days{
+  background-color: #333;
+  color: #fff;
 }
 .fetch-btn {
   font-size: 0.9rem;
   border: none;
+  text-transform: capitalize;
   outline: none;
   padding: 0.3rem;
   background-color: #0084ff;
