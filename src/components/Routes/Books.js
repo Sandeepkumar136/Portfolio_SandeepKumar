@@ -1,12 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Images_Exported from "../assets/Pictures/ImageExporter";
-import Loader from "../contents/Loader";
 
 const Books = () => {
   return (
     <>
-      <Loader />
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

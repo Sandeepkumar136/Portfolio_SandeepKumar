@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Loader from '../contents/Loader';
 import AlertMessage from '../contents/AlertMessage';
 import FormServices from '../contents/FormServices';
 import services from '../assets/Json/Services';
@@ -34,7 +33,6 @@ const Services = () => {
 
   return (
     <div>
-      <Loader />
       <AlertMessage
         heading={AlertData[0].heading}
         description={AlertData[0].description}

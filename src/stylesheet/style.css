@@ -22,7 +22,7 @@ body {
   color: #f1f1f1;
 }
 
-.git-days, .text-cli, .title-cli, .title-cont, .text-submit, .f-submit-btn, .em-subtitle, .em-title, .services-card-btn, .text-services, .heading-services, .text-alert, .heading-alert, .text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
+.uni-title, .sch-state, .sch-add, .sch-subtitle, .sch-heading, .git-days, .text-cli, .title-cli, .title-cont, .text-submit, .f-submit-btn, .em-subtitle, .em-title, .services-card-btn, .text-services, .heading-services, .text-alert, .heading-alert, .text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
   font-family: "TikTok Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -1444,4 +1444,178 @@ body {
   .cont-container {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+.sch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 2rem;
+}
+
+.sch-contain {
+  padding: 1rem;
+  height: 100%;
+  border-radius: 3px;
+  box-shadow: 0 0 1px 0.1px #999;
+  transition: 0.3s all ease-in;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sch-contain:hover {
+  box-shadow: 0 0 1px 0.6px #999;
+}
+
+.sch-logo-contain {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sch-icon {
+  font-size: 2rem;
+}
+
+.sch-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  opacity: 0.8;
+  text-transform: capitalize;
+}
+
+.sch-subtitle {
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.sch-add {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.sch-state {
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1.5;
+}
+
+.sch-desc {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.uni-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.uni-contain {
+  transition: 0.3s all ease-in;
+  padding: 1rem;
+  border-radius: 3px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 0 1px 0.1px #999;
+}
+
+.uni-contain:hover {
+  box-shadow: 0 0 1px 0.6px #999;
+}
+
+.uni-logo-contain {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.uni-logo-contain i {
+  font-size: 2rem;
+}
+
+.uni-title {
+  font-size: 1.2rem;
+  opacity: 0.8;
+  font-weight: 700;
+}
+
+.uni-subtitle {
+  font-size: 1rem;
+  box-shadow: 0 0 1px 0.2px #999;
+  padding: 6px 16px;
+  text-transform: capitalize;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.uni-status {
+  font-size: 1rem;
+  color: #01900f;
+  box-shadow: 0 0 1px 0.2px #999;
+  padding: 6px 16px;
+  text-transform: capitalize;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.uni-desc {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.lang-container {
+  margin: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lang-contain {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 2rem;
+}
+
+.lang-contain i {
+  font-size: 4rem;
+  opacity: 0.2;
+  color: #d8d8d8;
+  transition: 0.6s all ease-in-out;
+  cursor: pointer;
+}
+
+.lang-contain i:hover {
+  color: #000;
 }/*# sourceMappingURL=style.css.map */
