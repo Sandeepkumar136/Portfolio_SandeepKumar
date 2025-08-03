@@ -1,13 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+// Faster animation settings
 const cardVariant = {
-  hidden: { y: 100, scale: 0.9, opacity: 0 },
+  hidden: { y: 60, scale: 0.95, opacity: 0 },
   visible: {
     y: 0,
     scale: 1,
     opacity: 1,
-    transition: { type: "spring", stiffness: 100, damping: 10 },
+    transition: { type: "spring", stiffness: 180, damping: 12, duration: 0.4 },
   },
 };
 
@@ -15,7 +16,7 @@ const containerVariant = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.1, // reduced from 0.2 to 0.1
     },
   },
 };
@@ -59,16 +60,41 @@ const Education = () => {
     },
   ];
 
+  const skills = [
+    "html5",
+    "css3",
+    "javascript",
+    "sass",
+    "react",
+    "nodejs",
+    "redux",
+    "mongodb",
+    "typescript",
+    "jquery",
+    "vuejs",
+    "python",
+    "flask",
+    "postgresql",
+    "bootstrap",
+    "netlify",
+    "github",
+    "git",
+    "visual-studio",
+    "terminal",
+  ];
+
   return (
     <div className="edu-container">
+      {/* Academic Journey Section */}
       <motion.div
         className="heading-inf"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.5 }}
       >
         Academic Journey
       </motion.div>
+
       <motion.div
         className="sch-container"
         variants={containerVariant}
@@ -77,11 +103,7 @@ const Education = () => {
         viewport={{ once: false, amount: 0.2 }}
       >
         {items.map((item, index) => (
-          <motion.div
-            className="sch-contain"
-            key={index}
-            variants={cardVariant}
-          >
+          <motion.div className="sch-contain" key={index} variants={cardVariant}>
             <div className="sch-logo-contain">
               <i className="sch-icon bx bxs-graduation"></i>
               <div className="sch-heading">{item.heading}</div>
@@ -95,14 +117,16 @@ const Education = () => {
         ))}
       </motion.div>
 
+      {/* Learning Section */}
       <motion.div
         className="heading-inf"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.5 }}
       >
         Learning
       </motion.div>
+
       <motion.div
         className="uni-container"
         variants={containerVariant}
@@ -112,7 +136,7 @@ const Education = () => {
       >
         <motion.div className="uni-contain" variants={cardVariant}>
           <div className="uni-logo-contain">
-              <i className="bx bxs-bank"></i>
+            <i className="bx bxs-bank"></i>
             <div className="uni-title">Master in C.</div>
           </div>
           <div className="uni-subtitle">Sradha Khanpra</div>
@@ -121,14 +145,13 @@ const Education = () => {
             With quiet perseverance, Sradha Khanpra delves into the elegant
             precision of C—where logic flows like a river through valleys of
             memory. In every function, she chisels mastery, weaving clarity and
-            power into the codebase, shaping a mind as sharp as the compiler
-            that guides her.
+            power into the codebase.
           </p>
         </motion.div>
 
         <motion.div className="uni-contain" variants={cardVariant}>
           <div className="uni-logo-contain">
-              <i className="bx bxs-bank"></i>
+            <i className="bx bxs-bank"></i>
             <div className="uni-title">Master in MongoDB</div>
           </div>
           <div className="uni-subtitle">Haris Ali Khan</div>
@@ -136,26 +159,26 @@ const Education = () => {
           <p className="uni-desc">
             In the dynamic heart of NoSQL, Haris Ali Khan studies the vast
             forests of MongoDB. Document by document, he deciphers the art of
-            flexible data. His journey is one of modern mastery, where queries
-            whisper secrets and collections unfold like ancient scrolls in
-            digital temples.
+            flexible data. His journey is one of modern mastery.
           </p>
         </motion.div>
       </motion.div>
 
+      {/* Language Skills Section */}
       <motion.div
         className="heading-inf"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.5 }}
       >
         Language Skills.
       </motion.div>
+
       <motion.div
         className="lang-container"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.6 }}
       >
         <motion.div
           className="lang-contain"
@@ -164,28 +187,7 @@ const Education = () => {
           whileInView="visible"
           viewport={{ once: false, amount: 0.2 }}
         >
-          {[
-            "html5",
-            "css3",
-            "javascript",
-            "sass",
-            "react",
-            "nodejs",
-            "redux",
-            "mongodb",
-            "typescript",
-            "jquery",
-            "vuejs",
-            "python",
-            "flask",
-            "postgresql",
-            "bootstrap",
-            "netlify",
-            "github",
-            "git",
-            "visual-studio",
-            "terminal",
-          ].map((icon, i) => (
+          {skills.map((icon, i) => (
             <motion.i
               className={`bx ${icon.startsWith("bxs") ? icon : `bxl-${icon}`}`}
               key={i}

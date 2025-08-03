@@ -18,6 +18,7 @@ const Images={
     git_background: require('./2150248019.jpg'),
     sandeep_one: require('./sandeep_img1.jpg'),
     form_background: require('./vadim-shevyrin-xsTDS2URj6c-unsplash.jpg'),
+    // resumedoc: require')
 
 }
 export default Images;
