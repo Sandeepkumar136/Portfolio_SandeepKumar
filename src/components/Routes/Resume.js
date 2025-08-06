@@ -61,13 +61,13 @@ const Resume = () => {
         </Slider>
       </div>
       <div className="resume-links-container">
-        <a href={Images_Exported.resumedoc} download={Images_Exported.resumedoc} className="resume-links">
+        <a href={Images_Exported.resumedoc} download={Images_Exported.resumedoc} className="resume-links doc">
           <i class="bx bxs-file-doc"></i>
         </a>
-        <a href={Images_Exported.resumepdf} download={Images_Exported.resumepdf} className="resume-links">
+        <a href={Images_Exported.resumepdf} download={Images_Exported.resumepdf} className="resume-links pdf">
           <i class="bx bxs-file-pdf"></i>
         </a>
-        <a href={Images_Exported.resumepdf} rel="noreferrer" target="_blank" className="resume-links">
+        <a href={Images_Exported.resumepdf} rel="noreferrer" target="_blank" className="resume-links img">
           <i class="bx bxs-file-image"></i>
         </a>
       </div>

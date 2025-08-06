@@ -22,7 +22,7 @@ body {
   color: #f1f1f1;
 }
 
-.uni-title, .sch-state, .sch-add, .sch-subtitle, .sch-heading, .git-days, .text-cli, .title-cli, .title-cont, .text-submit, .f-submit-btn, .em-subtitle, .em-title, .services-card-btn, .text-services, .heading-services, .text-alert, .heading-alert, .text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
+.certi-date, .uni-title-c, .uni-title, .sch-state, .sch-add, .sch-subtitle, .sch-heading, .git-days, .text-cli, .title-cli, .title-cont, .text-submit, .f-submit-btn, .em-subtitle, .em-title, .services-card-btn, .text-services, .heading-services, .text-alert, .heading-alert, .text-contain-index-pera, .side-text, .d-nav-items, .nav-items {
   font-family: "TikTok Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -1808,4 +1808,107 @@ body {
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
+}
+
+.certificates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1rem 2rem;
+}
+
+.cert-container {
+  padding: 1rem;
+  height: 100%;
+  border-radius: 3px;
+  box-shadow: 0 0 1px 0.1px #999;
+  background-color: #f0f0f0;
+  transition: 0.5s all ease-in-out;
+}
+
+.cert-container:hover {
+  box-shadow: 0 0 1px 0.6px #999;
+}
+
+.dca {
+  width: 70px;
+  height: 30px;
+}
+
+.tally {
+  width: 70px;
+  height: 40px;
+}
+
+.jockey {
+  width: 130px;
+  height: 30px;
+  filter: hue-rotate(90deg);
+}
+
+.dark-mode .jockey {
+  filter: hue-rotate(90deg);
+}
+
+.excel {
+  width: 45px;
+  height: 40px;
+}
+
+.w3s {
+  width: 45px;
+  height: 45px;
+}
+
+.amazon {
+  width: 85px;
+  height: 25px;
+}
+
+.pageind {
+  width: 35px;
+  height: 35px;
+}
+
+.aws {
+  width: 85px;
+  height: 30px;
+}
+
+.uni-title-c {
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.subtitle-cert {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  font-weight: 600;
+}
+
+.certi-date {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.dark-mode .uni-title-c {
+  color: #000;
+}
+
+.dark-mode .subtitle-cert {
+  color: #000;
+}
+
+.dark-mode .certi-date {
+  color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+  .certificates {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }/*# sourceMappingURL=style.css.map */
