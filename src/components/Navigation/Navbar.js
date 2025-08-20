@@ -14,7 +14,7 @@ const Navbar = () => {
       <nav className="nav-container">
         <div className="navbar-contents">
           <Link to="/" className="logo-contain">
-            <i className="bx bx-code-alt"></i>
+            <i className="bx bx-code-alt"></i> 
             <span className="logo">Sandeep Kumar</span>
           </Link>
           <ul className="nav-contain">
@@ -39,14 +39,14 @@ const Navbar = () => {
       </nav>
       <aside className={`sidebar ${isToggleSidebarOpen ? 'open': ''}`}>
         <ul className="side-contents">
-          <Link to="/services" className="side-items"><span className="side-icon"><i className="bx bx-book-content"></i></span> <span className="side-text">Services</span></Link>
-          <Link to="/books" className="side-items"><span className="side-icon"><i className="bx bx-book"></i></span> <span className="side-text">Books</span></Link>
-          <Link to="/education" className="side-items"><span className="side-icon"><i className="bx bxs-graduation"></i></span> <span className="side-text">Education</span></Link>
-          <Link to="/projects" className="side-items"><span className="side-icon"><i className="bx bx-detail"></i></span> <span className="side-text">Projects</span></Link>
-          <Link to="/contributors" className="side-items"><span className="side-icon"><i className="bx bx-group"></i></span> <span className="side-text">Contributors</span></Link>
-          <Link to="/achievements" className="side-items"><span className="side-icon"><i className="bx bx-trophy"></i></span> <span className="side-text">Achievements</span></Link>
-          <Link to="/resume" className="side-items"><span className="side-icon"><i className="bx bxs-file-pdf"></i></span> <span className="side-text">Resume</span></Link>
-          <Link to="/about" className="side-items"><span className="side-icon"><i className="bx bx-user"></i></span> <span className="side-text">About us</span></Link>
+          <Link onClick={ToggleSidebar} to="/services" className="side-items"><span className="side-icon"><i className="bx bx-book-content"></i></span> <span className="side-text">Services</span></Link>
+          <Link onClick={ToggleSidebar} to="/books" className="side-items"><span className="side-icon"><i className="bx bx-book"></i></span> <span className="side-text">Books</span></Link>
+          <Link onClick={ToggleSidebar} to="/education" className="side-items"><span className="side-icon"><i className="bx bxs-graduation"></i></span> <span className="side-text">Education</span></Link>
+          <Link onClick={ToggleSidebar} to="/projects" className="side-items"><span className="side-icon"><i className="bx bx-detail"></i></span> <span className="side-text">Projects</span></Link>
+          <Link onClick={ToggleSidebar} to="/contributors" className="side-items"><span className="side-icon"><i className="bx bx-group"></i></span> <span className="side-text">Contributors</span></Link>
+          <Link onClick={ToggleSidebar} to="/achievements" className="side-items"><span className="side-icon"><i className="bx bx-trophy"></i></span> <span className="side-text">Achievements</span></Link>
+          <Link onClick={ToggleSidebar} to="/resume" className="side-items"><span className="side-icon"><i className="bx bxs-file-pdf"></i></span> <span className="side-text">Resume</span></Link>
+          <Link onClick={ToggleSidebar} to="/about" className="side-items"><span className="side-icon"><i className="bx bx-user"></i></span> <span className="side-text">About us</span></Link>
         </ul>
       </aside>
     </div>
